@@ -1,0 +1,5 @@
+Legibilidad en el código cliente: Cada método (.age(...), .phone(...), .address(...)) deja claro qué significa cada dato en vez de adivinar el orden de argumentos en un constructor largo, y permite omitir opcionales fácilmente.
+
+Ventaja de Builder static e interno: Al ser static, no requiere una instancia previa de User para crearse (new User.Builder(...)), y al estar dentro de User agrupa lógicamente la construcción del objeto y puede acceder al constructor privado User(Builder).
+
+Inmutabilidad de User: Sí, porque todos los campos de User son private final, no hay setters públicos y el constructor de User es private, por lo que una vez creado con .build() sus valores no pueden modificarse.
